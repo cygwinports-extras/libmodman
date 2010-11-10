@@ -1,0 +1,12 @@
+--- origsrc/libmodman-2.0.1/libmodman/CMakeLists.txt	2010-09-01 15:19:38.000000000 -0500
++++ src/libmodman-2.0.1/libmodman/CMakeLists.txt	2010-11-10 13:30:29.354562200 -0600
+@@ -38,7 +38,8 @@ if (NOT WIN32 AND NOT APPLE)
+   configure_file(Findlibmodman.cmake.in
+                  ${CMAKE_CURRENT_BINARY_DIR}/Findlibmodman.cmake @ONLY)
+   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/Findlibmodman.cmake
+-          DESTINATION ${SHARE_INSTALL_DIR}/cmake/Modules)
++          DESTINATION ${LIB_INSTALL_DIR}/cmake/libmodman
++          RENAME libmodmanConfig.cmake)
+ endif()
+ 
+ # Define the library itself

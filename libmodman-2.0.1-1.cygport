@@ -1,0 +1,14 @@
+inherit cmake
+
+DESCRIPTION="C++ module management library"
+HOMEPAGE="http://code.google.com/p/libmodman/"
+SRC_URI="http://libmodman.googlecode.com/files/${P}.tar.gz"
+
+PATCH_URI="
+	2.0.1-cmake-install.patch
+	2.0.1-lib-install.patch
+"
+
+PKG_NAMES="libmodman1 libmodman-devel"
+libmodman1_CONTENTS="usr/bin/cygmodman-1.dll usr/share/doc/"
+libmodman_devel_CONTENTS="usr/include/ usr/lib/"
